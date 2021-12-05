@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import WhyUs from './components/WhyUs/WhyUs';
+import About from './components/About/About';
+import Products from "./components/Products/Products";
+import Reviews from "./components/Reviews/Reviews";
+import Register from "./components/Auth/Register";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div id="main-container">
+        <Header />
+        <div className="hero_area">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/why-us" element={<WhyUs />} />
+            <Route path="/about-us" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </div>
+        <script src="js/custom.js"></script>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
