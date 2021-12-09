@@ -35,7 +35,7 @@ const Header = () => {
                                         Register
                                     </span>
                                 </Link>
-                                <Link to="" className="account-link">
+                                <Link to="/login" className="account-link">
                                     <i className="fas fa-sign-in-alt" aria-hidden="true"></i>
                                     <span>
                                         Login
@@ -47,7 +47,7 @@ const Header = () => {
                                         logout
                                     </span>
                                 </Link>
-                                <Link to="" className="cart-link">
+                                <Link to="/cart" className="cart-link">
                                     <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                                     <span>
                                         Cart

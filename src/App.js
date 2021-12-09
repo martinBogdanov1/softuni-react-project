@@ -12,6 +12,8 @@ import About from './components/About/About';
 import Products from "./components/Products/Products";
 import Reviews from "./components/Reviews/Reviews";
 import Register from "./components/Auth/Register";
+import Login from "./components/Auth/Login";
+import AddToCart from "./components/AddToCart/AddToCart";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} /> 
+            <Route path="/cart" element={<AddToCart />} /> 
           </Routes>
         </div>
         <script src="js/custom.js"></script>

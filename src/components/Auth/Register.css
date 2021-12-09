@@ -120,9 +120,9 @@
   /* ==========================================================================
      #PAGE WRAPPER
      ========================================================================== */
-  .page-wrapper {
+  /* .page-wrapper {
     min-height: 100vh;
-  }
+  } */
   
   body {
     font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;

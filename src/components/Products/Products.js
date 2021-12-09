@@ -9,9 +9,13 @@ const Products = () => {
 
     useEffect(() => {
         async function setNewData() {
-            const response = await fetch('http://localhost:5000/api/data/products');
-            const data = await response.json();
-            setProducts(data);
+            try {
+                const response = await fetch('http://localhost:5000/api/data/products');
+                const data = await response.json();
+                setProducts(data);
+            } catch (err) {
+                console.log(err);
+            }
         }
         setNewData();
     }, []);
