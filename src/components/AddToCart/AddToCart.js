@@ -1,167 +1,199 @@
 import './AddToCart.css';
+import { Link } from 'react-router-dom';
 
 const AddToCart = () => {
     return (
-        <div className="bootstrap-iso">
-            <section>
+        <section className="banner-bottom-wthreelayouts py-lg-5 py-3">
+            <div className="container">
+                <div className="inner-sec-shop px-lg-4 px-3">
+                    <h3 className="tittle-w3layouts my-lg-4 mt-3">Checkout </h3>
+                    <div className="checkout-right">
+                        <h4>Your shopping cart contains:
+                            <span>3 Products</span>
+                        </h4>
+                        <table className="timetable_sub">
+                            <thead>
+                                <tr>
+                                    <th>SL No.</th>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Product Name</th>
 
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="card wish-list mb-3">
-                            <div class="card-body">
-
-                                <h5 class="mb-4">Cart (<span>2</span> items)</h5>
-
-                                <div class="row mb-4">
-                                    <div class="col-md-5 col-lg-3 col-xl-3">
-                                        <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
-                                            <img class="img-fluid w-100"
-                                                src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample" />
-                                            <a href="#!">
-                                                <div class="mask waves-effect waves-light">
-                                                    <img class="img-fluid w-100"
-                                                        src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" />
-                                                    <div class="mask rgba-black-slight waves-effect waves-light"></div>
+                                    <th>Price</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="rem1">
+                                    <td className="invert">1</td>
+                                    <td className="invert-image">
+                                        <Link to="single.html">
+                                            <img src="images/s1.jpg" alt=" " className="img-responsive" />
+                                        </Link>
+                                    </td>
+                                    <td className="invert">
+                                        <div className="quantity">
+                                            <div className="quantity-select">
+                                                <div className="entry value-minus">&nbsp;</div>
+                                                <div className="entry value">
+                                                    <span>1</span>
                                                 </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7 col-lg-9 col-xl-9">
-                                        <div>
-                                            <div class="d-flex justify-content-between">
-                                                <div>
-                                                    <h5>Blue denim shirt</h5>
-                                                    <p class="mb-3 text-muted text-uppercase small">Shirt - blue</p>
-                                                    <p class="mb-2 text-muted text-uppercase small">Color: blue</p>
-                                                    <p class="mb-3 text-muted text-uppercase small">Size: M</p>
-                                                </div>
-                                                <div>
-                                                    <div class="def-number-input number-input safari_only mb-0 w-100">
-                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                                                            class="minus"></button>
-                                                        <input class="quantity" min="0" name="quantity" value="1" type="number" />
-                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                                            class="plus"></button>
-                                                    </div>
-                                                    <small id="passwordHelpBlock" class="form-text text-muted text-center">
-                                                        (Note, 1 piece)
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
-                                                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
-                                                    <a href="#!" type="button" class="card-link-secondary small text-uppercase"><i
-                                                        class="fas fa-heart mr-1"></i> Move to wish list </a>
-                                                </div>
-                                                <p class="mb-0"><span><strong>$17.99</strong></span></p>
+                                                <div className="entry value-plus active">&nbsp;</div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <hr class="mb-4" />
-                                <div class="row mb-4">
-                                    <div class="col-md-5 col-lg-3 col-xl-3">
-                                        <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
-                                            <img class="img-fluid w-100"
-                                                src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg" alt="Sample" />
-                                            <a href="#!">
-                                                <div class="mask waves-effect waves-light">
-                                                    <img class="img-fluid w-100"
-                                                        src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg" />
-                                                    <div class="mask rgba-black-slight waves-effect waves-light"></div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7 col-lg-9 col-xl-9">
-                                        <div>
-                                            <div class="d-flex justify-content-between">
-                                                <div>
-                                                    <h5>Red hoodie</h5>
-                                                    <p class="mb-3 text-muted text-uppercase small">Shirt - red</p>
-                                                    <p class="mb-2 text-muted text-uppercase small">Color: red</p>
-                                                    <p class="mb-3 text-muted text-uppercase small">Size: M</p>
-                                                </div>
-                                                <div>
-                                                    <div class="def-number-input number-input safari_only mb-0 w-100">
-                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                                                            class="minus"></button>
-                                                        <input class="quantity" min="0" name="quantity" value="1" type="number" />
-                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                                            class="plus"></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
-                                                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
-                                                    <a href="#!" type="button" class="card-link-secondary small text-uppercase"><i
-                                                        class="fas fa-heart mr-1"></i> Move to wish list </a>
-                                                </div>
-                                                <p class="mb-0"><span><strong>$35.99</strong></span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </td>
+                                    <td className="invert">Irayz Butterfly </td>
 
-                            </div>
-                        </div>
+                                    <td className="invert">$281.00</td>
+                                    <td className="invert">
+                                        <div className="rem">
+                                            <div className="close1"> </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr className="rem2">
+                                    <td className="invert">2</td>
+                                    <td className="invert-image">
+                                        <Link to="single.html">
+                                            <img src="images/s5.jpg" alt=" " className="img-responsive" />
+                                        </Link>
+                                    </td>
+                                    <td className="invert">
+                                        <div className="quantity">
+                                            <div className="quantity-select">
+                                                <div className="entry value-minus">&nbsp;</div>
+                                                <div className="entry value">
+                                                    <span>1</span>
+                                                </div>
+                                                <div className="entry value-plus active">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td className="invert">Fastrack Aviator </td>
+
+                                    <td className="invert">$325.00</td>
+                                    <td className="invert">
+                                        <div className="rem">
+                                            <div className="close2"> </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr className="rem3">
+                                    <td className="invert">3</td>
+                                    <td className="invert-image">
+                                        <Link to="single.html">
+                                            <img src="images/s2.jpg" alt=" " className="img-responsive" />
+                                        </Link>
+                                    </td>
+                                    <td className="invert">
+                                        <div className="quantity">
+                                            <div className="quantity-select">
+                                                <div className="entry value-minus">&nbsp;</div>
+                                                <div className="entry value">
+                                                    <span>1</span>
+                                                </div>
+                                                <div className="entry value-plus active">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td className="invert">Opium (Grey)</td>
+
+                                    <td className="invert">$325.00</td>
+                                    <td className="invert">
+                                        <div className="rem">
+                                            <div className="close3"> </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
                     </div>
+                    <div className="checkout-left row">
+                        <div className="col-md-4 checkout-left-basket">
+                            <h4>Continue to basket</h4>
+                            <ul>
+                                <li>Product1
+                                    <i>-</i>
+                                    <span>$281.00 </span>
+                                </li>
+                                <li>Product2
+                                    <i>-</i>
+                                    <span>$325.00 </span>
+                                </li>
+                                <li>Product3
+                                    <i>-</i>
+                                    <span>$325.00 </span>
+                                </li>
+                                <li>Total Service Charges
+                                    <i>-</i>
+                                    <span>$55.00</span>
+                                </li>
+                                <li>Total
+                                    <i>-</i>
+                                    <span>$986.00</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="col-md-8 address_form">
+                            <h4>Add a new Details</h4>
+                            <form action="payment.html" method="post" className="creditly-card-form agileinfo_form">
+                                <section className="creditly-wrapper wrapper">
+                                    <div className="information-wrapper">
+                                        <div className="first-row form-group">
+                                            <div className="controls">
+                                                <label className="control-label">Full name: </label>
+                                                <input className="billing-address-name form-control" type="text" name="name" defaultValue="Full name" />
+                                            </div>
+                                            <div className="card_number_grids">
+                                                <div className="card_number_grid_left">
+                                                    <div className="controls">
+                                                        <label className="control-label">Mobile number:</label>
+                                                        <input className="form-control" type="text" defaultValue="Mobile number" />
+                                                    </div>
+                                                </div>
+                                                <div className="card_number_grid_right">
+                                                    <div className="controls">
+                                                        <label className="control-label">Landmark: </label>
+                                                        <input className="form-control" type="text" defaultValue="Landmark" />
+                                                    </div>
+                                                </div>
+                                                <div className="clear"> </div>
+                                            </div>
+                                            <div className="controls">
+                                                <label className="control-label">Town/City: </label>
+                                                <input className="form-control" type="text" defaultValue="Town/City" />
+                                            </div>
+                                            <div className="controls">
+                                                <label className="control-label">Address type: </label>
+                                                <select className="form-control option-w3ls">
+                                                    <option>Office</option>
+                                                    <option>Home</option>
+                                                    <option>Commercial</option>
 
-
-                    <div class="col-lg-4">
-
-                        <div class="card mb-3">
-                            <div class="card-body">
-
-                                <h5 class="mb-3">The total amount of</h5>
-
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                        Temporary amount
-                                        <span>$25.98</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                        Shipping
-                                        <span>Gratis</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                        <div>
-                                            <strong>The total amount of</strong>
-                                            <strong>
-                                                <p class="mb-0">(including VAT)</p>
-                                            </strong>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <span><strong>$53.98</strong></span>
-                                    </li>
-                                </ul>
-
-                                <button type="button" class="btn btn-primary btn-block waves-effect waves-light">go to checkout</button>
-
+                                        <button className="submit check_out">Delivery to this Address</button>
+                                    </div>
+                                </section>
+                            </form>
+                            <div className="checkout-right-basket">
+                                <Link to="payment.html">Make a Payment </Link>
                             </div>
                         </div>
 
-                        <div class="card mb-3">
-                            <div class="card-body">
-
-                                <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample1"
-                                    aria-expanded="false" aria-controls="collapseExample1">
-                                    Add a discount code (optional)
-                                    <span><i class="fas fa-chevron-down pt-1"></i></span>
-                                </a>
-
-                            </div>
-                        </div>
+                        <div className="clearfix"> </div>
 
                     </div>
 
                 </div>
 
-            </section>
-        </div>
+            </div>
+        </section>
     )
 }
 

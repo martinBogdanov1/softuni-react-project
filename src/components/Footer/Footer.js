@@ -2,116 +2,110 @@ import { Link } from "react-router-dom";
 import './Footer.css';
 const Footer = () => {
     return (
-        <div className="bootstrap-iso">
-            <section className="info_section">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-3">
-                            <div className="info_contact">
-                                <h5>
-                                    <Link to="/home" className="navbar-brand">
-                                        <span>
-                                            Minics
-                                        </span>
+        <footer className="py-lg-5 py-3">
+            <div className="container-fluid px-lg-5 px-3">
+                <div className="row footer-top-w3layouts">
+                    <div className="col-lg-3 footer-grid-w3ls">
+                        <div className="footer-title">
+                            <h3>About Us</h3>
+                        </div>
+                        <div className="footer-text">
+                            <p>Curabitur non nulla sit amet nislinit tempus convallis quis ac lectus. lac inia eget consectetur sed, convallis at
+                                tellus. Nulla porttitor accumsana tincidunt.</p>
+                            <ul className="footer-social text-left mt-lg-4 mt-3">
+
+                                <li className="mx-2">
+                                    <Link to="#">
+                                        <span className="fab fa-facebook-f"></span>
                                     </Link>
-                                </h5>
-                                <p>
-                                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                                    Address
-                                </p>
-                                <p>
-                                    <i className="fa fa-phone" aria-hidden="true"></i>
-                                    +01 1234567890
-                                </p>
-                                <p>
-                                    <i className="fa fa-envelope" aria-hidden="true"></i>
-                                    demo@gmail.com
-                                </p>
-                            </div>
+                                </li>
+                                <li className="mx-2">
+                                    <Link to="#">
+                                        <span className="fab fa-twitter"></span>
+                                    </Link>
+                                </li>
+                                <li className="mx-2">
+                                    <Link to="#">
+                                        <span className="fab fa-google-plus-g"></span>
+                                    </Link>
+                                </li>
+                                <li className="mx-2">
+                                    <Link to="#">
+                                        <span className="fab fa-linkedin-in"></span>
+                                    </Link>
+                                </li>
+                                <li className="mx-2">
+                                    <Link to="#">
+                                        <span className="fas fa-rss"></span>
+                                    </Link>
+                                </li>
+                                <li className="mx-2">
+                                    <Link to="#">
+                                        <span className="fab fa-vk"></span>
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
-                        <div className="col-md-3">
-                            <div className="info_info">
-                                <h5>
-                                    Information
-                                </h5>
-                                <p>
-                                    Eligendi sunt, provident, debitis nemo, facilis cupiditate velit libero dolorum aperiam enim nulla iste maxime corrupti ad illo libero minus.
+                    </div>
+                    <div className="col-lg-3 footer-grid-w3ls">
+                        <div className="footer-title">
+                            <h3>Get in touch</h3>
+                        </div>
+                        <div className="contact-info">
+                            <h4>Location :</h4>
+                            <p>0926k 4th block building, king Avenue, New York City.</p>
+                            <div className="phone">
+                                <h4>Contact :</h4>
+                                <p>Phone : +121 098 8907 9987</p>
+                                <p>Email :
+                                    <Link to="mailto:info@example.com">info@example.com</Link>
                                 </p>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="info_links">
-                                <h5>
-                                    Useful Link
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <Link to="/home">
-                                            Home
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/about-us">
-                                            About
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/products">
-                                            Products
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/why-us">
-                                            Why Us
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/reviews">
-                                            Testimonial
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="info_form ">
-                                <h5>
-                                    Newsletter
-                                </h5>
-                                <form action="">
-                                    <input type="email" placeholder="Enter your email" />
-                                    <button>
-                                        Subscribe
-                                    </button>
-                                </form>
-                                <div className="social_box">
-                                    <a href="https://facebook.com">
-                                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://twitter.com">
-                                        <i className="fa fa-twitter" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://instagram.com">
-                                        <i className="fa fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://youtube.com">
-                                        <i className="fa fa-youtube" aria-hidden="true"></i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
+                    <div className="col-lg-3 footer-grid-w3ls">
+                        <div className="footer-title">
+                            <h3>Quick Links</h3>
+                        </div>
+                        <ul className="links">
+                            <li>
+                                <Link to="/home">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/about-us">About</Link>
+                            </li>
+                            <li>
+                                <Link to="404.html">Error</Link>
+                            </li>
+                            <li>
+                                <Link to="/products">Shop</Link>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div className="col-lg-3 footer-grid-w3ls">
+                        <div className="footer-title">
+                            <h3>Sign up for your offers</h3>
+                        </div>
+                        <div className="footer-text">
+                            <p>By subscribing to our mailing list you will always get latest news and updates from us.</p>
+                            <form action="#" method="post">
+                                <input className="form-control" type="email" name="Email" defaultValue="Enter your email..." required="" />
+                                <button className="btn1">
+                                    <i className="far fa-envelope" aria-hidden="true"></i>
+                                </button>
+                                <div className="clearfix"> </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </section>
-            <footer className="footer_section">
-                <div className="container">
-                    <p>
-                        &copy; <span id="displayYear"></span> All Rights Reserved By
-                        <Link to="https://html.design/">Free Html Templates</Link>
+                <div className="copyright-w3layouts mt-4">
+                    <p className="copy-right text-center ">&copy; 2018 Goggles. All Rights Reserved | Design by
+                        <Link to="http://w3layouts.com/"> W3layouts </Link>
                     </p>
                 </div>
-            </footer>
-        </div >
+            </div>
+        </footer>
     );
 }
 
