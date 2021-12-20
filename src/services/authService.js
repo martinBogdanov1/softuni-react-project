@@ -1,23 +1,30 @@
-const register = async (data) => {
-    const user = await fetch('http://localhost:5000/api/users/register', {
+const register = async (data, path) => {
+    const res = await fetch('http://localhost:5000/api/users' + path, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
     });
+    
+    let jsonResult = await res.json();
 
-    return user;
+
+    if (res.ok) {
+        return jsonResult;
+    } else {
+        throw jsonResult;
+    }
 }
 
-const login = async (email, password) => {
+const login = async (email, password, path) => {
 
     const data = {
         email,
         password
     }
 
-    const user = await fetch('http://localhost:5000/api/users/login', {
+    const res = await fetch('http://localhost:5000/api/users' + path, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -25,7 +32,13 @@ const login = async (email, password) => {
         body: JSON.stringify(data)
     });
 
-    return user;
+    const jsonResult = await res.json();
+
+    if (res.ok) {
+        return jsonResult;
+    } else {
+        throw jsonResult;
+    }
 }
 
 
