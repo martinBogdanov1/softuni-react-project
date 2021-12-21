@@ -14,21 +14,23 @@ const Wishlist = () => {
     }, []);
 
     function onDeleteHandler(id) {
-        const newProducts = productsState.filter(x => x._id != id);
+        const newProducts = productsState.filter(x => x._id !== id);
         setProducts(newProducts);
     }
 
     async function getWishlistData(id) {
         const wishlistData = await wishlistService.getById(id);
-        const products = await productService.getMany(wishlistData.products, user.accessToken);
-        setProducts(products);
+        if (wishlistData) {
+            const products = await productService.getMany(wishlistData.products, user.accessToken);
+            setProducts(products);
+        }
     }
 
     return (
         <section className="banner-bottom-wthreelayouts py-lg-5 py-3">
-            <div className="container-fluid">
+            <h3 className="tittle-w3layouts my-lg-4 mt-3">Wishlist</h3>
+            <div className="container-fluid products">
                 <div className="inner-sec-shop px-lg-4 px-3">
-                    <h3 className="tittle-w3layouts my-lg-4 mt-3">Wishlist</h3>
                     <div className="row mt-lg-3 mt-0">
                         <div className="left-ads-display col-lg-9">
                             <div className="row mt-lg-3 mt-0">
