@@ -13,7 +13,6 @@ import Products from "./components/Products/Products";
 import Register from "./components/Auth/Register";
 import Create from "./components/Auth/Create";
 import Login from "./components/Auth/Login";
-import AddToCart from "./components/AddToCart/AddToCart";
 import Details from "./components/Products/Details";
 import Edit from "./components/Auth/Edit";
 import Wishlist from "./components/Wishlist/Wishlist";
@@ -38,7 +37,6 @@ function App() {
                 <Route path="/register-admin" element={<Register portalName={"admin"}/>} />
                 <Route path="/login" element={<Login /> } />
                 <Route path="/login-admin" element={<Login portalName={"admin"}/>} />
-                <Route path="/cart" element={<AddToCart />} />
                 <Route path="/product/:pid" element={<Details />} />
               </Routes>
             </div>
