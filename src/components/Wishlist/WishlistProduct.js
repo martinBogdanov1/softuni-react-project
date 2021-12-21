@@ -18,7 +18,7 @@ const WishlistProduct = ({
 
     async function deleteHandler() {
         try {
-            const product = await wishlistService.remove(user._id, itemData._id, user.accessToken);
+            await wishlistService.remove(user._id, itemData._id, user.accessToken);
 
             onDeleteHandler(itemData._id);
         } catch (err) {
