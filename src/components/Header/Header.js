@@ -3,6 +3,7 @@ import ScriptTag from 'react-script-tag';
 import { useContext } from 'react';
 
 import './Header.css';
+
 import { AuthContext } from '../../contexts/authContext';
 
 const Header = () => {
@@ -88,27 +89,6 @@ const Header = () => {
                             : publicButtons
                         }
                     </div>
-                </div>
-                <div className="search">
-                    <div className="mobile-nav-button">
-                        <button id="trigger-overlay" type="button">
-                            <i className="fas fa-search"></i>
-                        </button>
-                    </div>
-
-                    <div className="overlay overlay-door">
-                        <button type="button" className="overlay-close">
-                            <i className="fa fa-times" aria-hidden="true"></i>
-                        </button>
-                        <form action="#" method="post" className="d-flex">
-                            <input className="form-control" type="search" defaultValue="Search here..." required="" />
-                            <button type="submit" className="btn btn-primary submit">
-                                <i className="fas fa-search"></i>
-                            </button>
-                        </form>
-
-                    </div>
-
                 </div>
                 <label className="top-log mx-auto"></label>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light top-header mb-2">

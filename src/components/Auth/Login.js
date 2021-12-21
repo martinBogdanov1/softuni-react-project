@@ -13,7 +13,6 @@ const Login = ({ portalName }) => {
 
     async function onLoginHandler(e) {
         e.preventDefault();
-
         const { email, password } = Object.fromEntries(new FormData(e.currentTarget));
         try {
             const userData = await authService.login(email, password, location.pathname);

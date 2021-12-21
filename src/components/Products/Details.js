@@ -43,7 +43,7 @@ const Details = () => {
             setWishData(newWishlistData);
         }
 
-        const item = await wishlistService.create(wishItem, user.accessToken);
+        await wishlistService.create(wishItem, user.accessToken);
         setWishData(wishItem);
     }
 

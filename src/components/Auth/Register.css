@@ -223,8 +223,26 @@ h6 {
   padding-top: 180px;
 }
 
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .register .p-t-20 {
   padding-top: 20px;
+}
+
+.register-title {
+  text-align: center;
+}
+.error {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  color: red;
+}
+.register-btn {
+  text-align: center;
 }
 
 .register .p-t-15 {
@@ -508,7 +526,7 @@ input {
 
 .register .input-group {
   position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 5px;
 }
 
 .register .input-group-icon {
