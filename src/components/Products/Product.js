@@ -77,31 +77,33 @@ const Product = ({
                     </div>
                     <div className="item-info-product">
                         <div className="info-product-price">
-                            <div className="grid_meta">
-                                <div className="product_price">
-                                    <h4>
-                                        <Link to={`/product/${itemData._id}`}>{`${itemData.bandName} ${itemData.title}`} </Link>
-                                    </h4>
-                                    <div className="grid-price mt-2">
-                                        <span className="money">{itemData.price} $</span>
-                                    </div>
+
+                            <div className="product_price">
+                                <h4>
+                                    <Link to={`/product/${itemData._id}`}>{`${itemData.bandName} ${itemData.title}`} </Link>
+                                </h4>
+                            </div>
+                            <div className="price-group">
+                                <div className="grid-price mt-2">
+                                    <span className="money">{itemData.price} $</span>
+                                </div>
+                                <div className="googles single-item hvr-outline-out">
+                                    {
+                                        user._id
+                                            ? user.role === 'admin'
+                                                ? user._id === itemData.ownerId
+                                                    ? popUp
+                                                        ? popUpButtons
+                                                        : adminButtons
+                                                    : null
+                                                : isWished
+                                                    ? <div>Item alredy in wishlist</div>
+                                                    : userButtons
+                                            : null
+                                    }
                                 </div>
                             </div>
-                            <div className="googles single-item hvr-outline-out">
-                                {
-                                    user._id
-                                        ? user.role === 'admin'
-                                            ? user._id === itemData.ownerId
-                                                ? popUp
-                                                    ? popUpButtons
-                                                    : adminButtons
-                                                : null
-                                            : isWished
-                                                ? <div>Item alredy in wishlist</div>
-                                                : userButtons
-                                        : null
-                                }
-                            </div>
+
                         </div>
                         <div className="clearfix"></div>
                     </div>
