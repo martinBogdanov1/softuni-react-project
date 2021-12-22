@@ -1,7 +1,7 @@
 import './Register.css';
 
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useContext } from 'react';
+import { useNavigate, useLocation, } from 'react-router-dom';
+import { useContext, useState } from 'react';
 
 import authService from '../../services/authService';
 import { AuthContext } from '../../contexts/authContext';
@@ -10,6 +10,7 @@ const Login = ({ portalName }) => {
     const { login } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const [requestError, setRequestError] = useState('');
 
     async function onLoginHandler(e) {
         e.preventDefault();
@@ -21,7 +22,7 @@ const Login = ({ portalName }) => {
 
             navigate('/');
         } catch (err) {
-            console.log(err);
+            setRequestError('Wrong email or password');
         }
     }
 
@@ -47,6 +48,7 @@ const Login = ({ portalName }) => {
                                         </div>
                                     </div>
                                 </div>
+                                <p className="error">{requestError}</p>
                                 <div className="p-t-15">
                                     <button className="btn btn--radius-2 btn--blue" type="submit">Submit</button>
                                 </div>
