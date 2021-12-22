@@ -85,7 +85,7 @@ const Details = () => {
                                                 ? adminButtons
                                                 : null
                                             : wishData && wishData.products.includes(product._id)
-                                                ? <div>ASdasdsad</div>
+                                                ? <div>Item already in wishlist</div>
                                                 : userButtons
                                         : null
 
