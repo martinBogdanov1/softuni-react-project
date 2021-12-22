@@ -32,6 +32,7 @@ const Register = ({ portalName }) => {
     const validate = (values) => {
         const errors = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        
         if (!values.email) {
             errors.email = "Email is required!";
         } else if (!regex.test(values.email)) {
@@ -47,6 +48,7 @@ const Register = ({ portalName }) => {
         } else if (!values.password !== !values.rePassword) {
             errors.password = "Passwords don't match";
         }
+
         return errors;
     };
 
